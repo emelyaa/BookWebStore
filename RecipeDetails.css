@@ -1,0 +1,86 @@
+.recipe-steps img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px gray; 
+  }
+  
+  h1 {
+    color: #e76f51; 
+    margin-top: 3rem;
+    border-bottom: 2px solid #e76f51;
+    padding-bottom: 0.5rem;
+    grid-column: 1/-1;
+  }
+  
+  h2 {
+    color: #2a9d8f; 
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+/* Level 1 container */
+.recipe-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+}
+/* Level 2 container */
+.recipe-category{
+  
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* Level 3 items */
+
+.recipe-steps {
+  background-color: blanchedalmond;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px gray;
+  padding: 15px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.recipe-steps li{
+  text-align: start;
+}
+
+.buy-book-link {
+  background-color: azure;
+  
+}
+
+/* for Mobile devices */
+@media (max-width: 600px) {
+  
+  
+  .recipe-details {
+    display: block;
+  }
+
+  .recipe-category{
+    display: block;
+  }
+  
+  .recipe-steps {
+    display: block;
+  }
+
+  .recipe-steps img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px gray; 
+  }
+  
+}

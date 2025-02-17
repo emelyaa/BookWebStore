@@ -1,0 +1,242 @@
+.home {
+    padding: 20px;
+    text-align: center;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: min-content; 
+    gap: 10px; 
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 2rem; 
+}
+
+/* Carousel*/
+.carousel {
+    position: relative;
+    width: 100%; 
+    max-width: 800px;
+    margin: 2rem auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px gray;
+    grid-column: 1 / span 3; 
+    background-color: whitesmoke;
+}
+
+.carousel p {
+    margin: 2rem;
+    
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.carousel-image {
+    min-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 40%;
+    background: gray;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 5; /* must be lower than z-index of hamburg menu to not cover button*/
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.trending-sweets,
+.limited-edition-candy {
+    margin-top: 30px;
+}
+
+/* Horizontal Display*/
+.recent-recipes {
+    margin: 2rem;;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 5px solid gray;
+    border-radius: 10px;
+    grid-column: 1 / span 4; 
+  }
+  
+  .recent-recipes h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: gre;
+  }
+
+  .recent-recipe a {
+    text-decoration: none; 
+    color: purple; 
+    font-weight: bold; 
+    font-size: 1rem;
+ 
+  }
+
+  .recent-recipe  {
+    border-radius: 5px;
+    background-color: pink;
+    border-radius: 5px;
+    padding: 1rem;
+
+  }
+  
+  .recent-recipe a:hover {
+
+    text-decoration: underline; 
+  }
+  
+  .recent-recipes-container {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: space-between;
+  }
+  
+  
+
+
+.card {
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 300px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: pink;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+.learn-more-button {
+    margin: 10px;
+}
+
+/* Vertical Display */
+.vertical-display {
+    grid-column: 4; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .vertical-display-item {
+    cursor: pointer;
+  }
+  
+  .vertical-display-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px gray;
+  }
+  
+  
+  .vertical-display-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px gray;
+  }
+  
+
+/* for Mobile devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-image {
+        height: 200px;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .recent-recipes-container {
+        display: block;
+
+    }
+      .home-container {
+        display: block;
+
+    }
+}
+
+@media (prefers-reduced-motion: reduced) {
+    .carousel-images {
+        transform: translateX(calc(-100% * var(--current-slide, 0)));
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .recent-recipe a {
+        transition: color 0.3s ease; 
+      }
+
+      .vertical-display-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  }
+  
